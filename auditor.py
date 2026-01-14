@@ -27,16 +27,15 @@ def encode_image(uploaded_file):
     """Converte o arquivo de imagem para Base64 para a API de Visão."""
     return base64.b64encode(uploaded_file.getvalue()).decode('utf-8')
 
-st.title("🔍 Auditor Técnico de Tabelas")
-st.write("A área de colagem agora ocupa toda a largura, com o upload do print logo abaixo.")
+st.title("🔍 Auditor Técnico de Tabelas Pumps Brasil")
 
 # --- SEÇÃO 1: ÁREA DE COLAGEM (LARGURA TOTAL) ---
-st.subheader("1. Cole a Tabela Aqui (Word ou Excel)")
+st.subheader("1. Cole a Tabela do site Aqui")
 # Removendo colunas para ocupar a horizontal inteira
 texto_puro = st.text_area(
     "Área de colagem técnica:", 
     height=250, 
-    placeholder="Selecione no Word/Excel, copie (Ctrl+C) e cole aqui (Ctrl+V)...", 
+    placeholder="Selecione a tabela inteira do site, incluindo os títulos, copie (Ctrl+C) e cole aqui (Ctrl+V)...", 
     key="area_tabela"
 )
 
@@ -105,5 +104,6 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
             except Exception as e:
 
                 st.error(f"Erro ao processar a requisição na API: {e}")
+
 
 
