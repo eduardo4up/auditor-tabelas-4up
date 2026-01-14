@@ -75,6 +75,7 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
                 
                 response = client.chat.completions.create(
                     model="gpt-4o",
+                    temperature=0, # Define o rigor máximo (0 = Determinístico/Exato)
                     messages=[
                         {
                             "role": "system", 
@@ -104,6 +105,7 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
             except Exception as e:
 
                 st.error(f"Erro ao processar a requisição na API: {e}")
+
 
 
 
