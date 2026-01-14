@@ -21,7 +21,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # 2. Inicialização da API (Substitua pela sua chave)
-client = OpenAI(api_key="client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])")
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def encode_image(uploaded_file):
     """Converte o arquivo de imagem para Base64 para a API de Visão."""
@@ -104,3 +104,4 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
             except Exception as e:
 
                 st.error(f"Erro ao processar a requisição na API: {e}")
+
