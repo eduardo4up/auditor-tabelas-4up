@@ -82,6 +82,7 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
                             "content": (
                                 "Você é um auditor de dados técnicos. Compare a tabela de texto fornecida "
                                 "com a imagem enviada. Verifique se todos os valores, modelos e potências correspondem. "
+                                "se atente com os valores e os asteríscos, os campos com asterisco devem bater, e os campos em branco também devem bater com campos em branco ou traços"
                                 "Responda se os dados conferem ou descreva as divergências com precisão."
                             )
                         },
@@ -104,4 +105,5 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
             except Exception as e:
 
                 st.error(f"Erro ao processar a requisição na API: {e}")
+
 
