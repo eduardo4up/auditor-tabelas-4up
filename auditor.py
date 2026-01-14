@@ -74,7 +74,7 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
                 base64_image = encode_image(arquivo_imagem)
                 
                 response = client.chat.completions.create(
-                    model="gpt-4o",
+                    model="gpt-5.2",
                     temperature=0, # Define o rigor máximo (0 = Determinístico/Exato)
                     messages=[
                         {
@@ -105,6 +105,7 @@ if st.button("🚀 Iniciar Auditoria Técnica", use_container_width=True):
             except Exception as e:
 
                 st.error(f"Erro ao processar a requisição na API: {e}")
+
 
 
 
